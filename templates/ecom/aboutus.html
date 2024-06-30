@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Dream House</title>
+  <style media="screen">
+    .footer{
+      position: fixed;
+    }
+  </style>
+</head>
+
+<!--<body style="background-color:#f7f7f7;background-image: url('{% static 'images/logo.jpg' %}')">-->
+  {%if request.user.is_authenticated%}
+    {% include "ecom/customer_navbar.html" %}
+  {%else%}
+    {% include "ecom/navbar.html" %}
+  {%endif%}
+  <br><br><br>
+<!--< background-image src="{% static 'images/logo.jpg' %}" alt="Image"> -->
+
+  <h1>Project Description:</h1>
+<ul >
+                   <li>User-friendly interface: A real estate management website should have a clean and intuitive interface that allows users to easily navigate and access the desired information. </li>
+                   <li>Property listings: The website should provide comprehensive and up-to-date property listings.
+</li>
+                   <li>Property details and descriptions: Each property listing should have detailed information, including property descriptions, features, nearby amenities
+</li>
+                   <li>Contact and inquiry forms: Users should be able to contact the property owners, real estate agents, or management companies directly through the website.
+</li>
+
+    <li>Mobile responsiveness: In today's mobile-driven world, it is essential for the real estate management website to be mobile-friendly.
+</li>
+
+    <li>Different interfaces for both admin and users with different functionalities.
+        Admin functionality includes add products,manage products, price of the property,categorizing commercial or residential etc..
+        User functionality includes ordering a product
+
+</li>
+             </ul>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+  {% include "ecom/footer.html" %}
+</body>
+
+
+
+</html>
